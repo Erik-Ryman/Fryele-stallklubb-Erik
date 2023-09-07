@@ -96,9 +96,7 @@ h2 {
   border-radius: 10px;
 }
 
-.contact:first-child {
-  margin-top: 0;
-}
+
 
 .contact-img {
   height: 250px;
@@ -145,4 +143,7 @@ h2 {
     max-width: 250px;
     object-fit: cover;
   }
+  .contact:first-child {
+  margin-top: 0;
+}
 }
