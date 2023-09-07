@@ -20,9 +20,9 @@ body {
 .meny {
   display: flex;
   align-items: center;
-  margin-left: 50px;
-  margin-right: 50px;
-  padding: 20px 30px;
+  /* margin-left: 50px;
+  margin-right: 50px; */
+  padding: 20px 80px;
   font-size: 1.4rem;
 }
 nav a:hover {
@@ -55,28 +55,48 @@ nav a {
   display: flex;
   align-items: center;
   max-width: 600px;
-  height: 200px;
+  min-height: 180px;
   background-color: #223462;
   color: #c5cfd7;
   padding: 20px;
-  border-radius: 5px;
   margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 h1 {
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin: 40px 0;
 }
 
 .info-bild {
   width: 40%;
   margin-right: 10px;
   float: left;
-  border-radius: 5px;
+  border-radius: 10px 0 0 10px;
 }
 
 h2 {
   margin-bottom: 20px;
   font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .meny-container {
+    height: 50px;
+  }
+  a {
+    display: flex;
+  }
+  .meny {
+    display: flex;
+    padding: 20px 30px;
+
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .info-container {
+    flex-flow: column nowrap;
+  }
 }
