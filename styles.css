@@ -93,29 +93,35 @@ h2 {
   margin: 10px;
   text-align: center;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 10px;
+}
+
+.contact:first-child {
+  margin-top: 0;
 }
 
 .contact-img {
   height: 250px;
+  max-width: 250px;
+  object-fit: cover;
+  border-radius: 10px;
 }
-.contact h3 {
-  margin-top: 20px;
+
+.contact h2 {
+  font-size: 1.4rem;
+  margin: 10px 0;
 }
 .contact p {
   margin: 15px 0;
 }
 
 @media only screen and (max-width: 1200px) {
-  .meny-container {
-    height: 50px;
-  }
   a {
     display: flex;
   }
   .meny {
     display: flex;
-    padding: 20px 30px;
+    padding: 20px 10px;
     font-size: 1rem;
     font-weight: 700;
   }
@@ -125,5 +131,18 @@ h2 {
   .title {
     font-size: 25px;
     margin: 20px 0;
+  }
+  .info-bild {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px 10px 0 0;
+  }
+  .info-boxes {
+    display: block;
+  }
+  .contact-img {
+    height: 250px;
+    max-width: 250px;
+    object-fit: cover;
   }
 }
