@@ -10,6 +10,8 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+/* CSS till navigations menyn  */
+
 .meny-container {
   display: flex;
   height: 65px;
@@ -40,6 +42,8 @@ nav a {
 .logo {
   font-size: 2rem;
 }
+
+/* CSS till nyheter och information på startsidan  */
 
 .info-container {
   display: flex;
@@ -79,6 +83,8 @@ h2 {
   font-size: 1.2rem;
 }
 
+/* CSS till fliken Kontakt  */
+
 .contact-container {
   display: flex;
   flex-wrap: wrap;
@@ -111,34 +117,7 @@ h2 {
   margin: 15px 0;
 }
 
-.ridskola {
-  display: none;
-}
-
-.ridskola:target {
-  display: block;
-}
-.button-container {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 40px 0;
-  font-size: 1.4rem;
-}
-.button {
-  text-decoration: none;
-  background-color: #223462;
-  color: #c5cfd7;
-  padding: 20px 60px;
-  border-radius: 10px;
-  cursor: pointer;
-  border: 2px solid #223462;
-}
-
-.button:hover {
-  background-color: #c5cfd7;
-  color: #223462;
-  transition: 0.4s;
-}
+/* CSS till fliken Ridskola  */
 
 .ridskola-hast {
   width: 400px;
@@ -170,6 +149,70 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+/* CSS till drop down (accordion) menyn under fliken ridskola  */
+
+.accordion {
+  width: 1200px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.item {
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 24px;
+  row-gap: 32px;
+  align-items: center;
+  justify-items: center;
+}
+.acc-icon {
+  width: 36px;
+  height: 36px;
+  fill: #343a40;
+  margin: 0 40px;
+}
+.acc-text {
+  font-weight: 700;
+  font-size: 36px;
+  color: #343a40;
+}
+
+.hidden-box {
+  grid-column: 2;
+  display: none;
+}
+
+.open {
+  border-top: 4px solid #223462;
+}
+
+.open .hidden-box {
+  display: block;
+}
+.open .acc-icon,
+.open .acc-text {
+  fill: #223462;
+  color: #223462;
+}
+
+.personal p {
+  text-align: left;
+}
+.personal {
+  height: auto;
+}
+
+.acc-p {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+}
+
+/* Media query för mindra skärmar  */
 
 @media only screen and (max-width: 1200px) {
   a {
@@ -203,5 +246,17 @@ h2 {
   }
   .contact:first-child {
     margin-top: 0;
+  }
+  .accordion {
+    width: 700px;
+  }
+  .acc-icon {
+    width: 28px;
+    height: 28px;
+    margin: 0;
+  }
+  .acc-text {
+    font-weight: 600;
+    font-size: 28px;
   }
 }
