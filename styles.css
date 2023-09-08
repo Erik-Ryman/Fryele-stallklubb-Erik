@@ -96,10 +96,6 @@ h2 {
   border-radius: 10px;
 }
 
-.contact:first-child {
-  margin-top: 0;
-}
-
 .contact-img {
   height: 250px;
   max-width: 250px;
@@ -113,6 +109,66 @@ h2 {
 }
 .contact p {
   margin: 15px 0;
+}
+
+.ridskola {
+  display: none;
+}
+
+.ridskola:target {
+  display: block;
+}
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 40px 0;
+  font-size: 1.4rem;
+}
+.button {
+  text-decoration: none;
+  background-color: #223462;
+  color: #c5cfd7;
+  padding: 20px 60px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #223462;
+}
+
+.button:hover {
+  background-color: #c5cfd7;
+  color: #223462;
+  transition: 0.4s;
+}
+
+.ridskola-hast {
+  width: 400px;
+  height: 400px;
+  background-color: #223462;
+  color: #c5cfd7;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+.ridskola-img {
+  height: 250px;
+  max-width: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.ridskola > p {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+}
+.ridskola h2 {
+  margin-top: 15px;
+}
+.hast-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -144,5 +200,8 @@ h2 {
     height: 250px;
     max-width: 250px;
     object-fit: cover;
+  }
+  .contact:first-child {
+    margin-top: 0;
   }
 }
