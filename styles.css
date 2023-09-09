@@ -315,6 +315,8 @@ h2 {
   }
   .info-container {
     flex-flow: column nowrap;
+    width: 90%;
+    margin: 0 auto;
   }
   .title {
     font-size: 25px;
