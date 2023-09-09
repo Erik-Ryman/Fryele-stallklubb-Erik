@@ -1,5 +1,5 @@
-/* Main #223462 */
-/* Secondary #0dfb84  */
+/* Main #0dce94 */
+/* Secondary #c5cfd7  */
 * {
   margin: 0;
   padding: 0;
@@ -15,32 +15,32 @@ body {
 .meny-container {
   display: flex;
   height: 65px;
-  border-bottom: 2px solid #223462;
+  border-bottom: 2px solid #0dce94;
   justify-content: space-around;
+  align-items: center;
 }
 
 .meny {
   display: flex;
-  align-items: center;
-  padding: 20px 80px;
+  justify-content: center;
   font-size: 1.4rem;
+  font-weight: 700;
+}
+.meny-container a {
+  padding: 20px 0;
+  width: calc(100% / 3);
 }
 nav a:hover {
   transition: 0.4s;
   background-color: #c5cfd7;
-  color: #223462;
+  /* color: #0dce94; */
 }
 nav {
-  background-color: #223462;
-  color: #c5cfd7;
+  background-color: #0dce94;
 }
 nav a {
   text-decoration: none;
-  color: #c5cfd7;
-}
-
-.logo {
-  font-size: 2rem;
+  color: #000;
 }
 
 /* CSS till nyheter och information på startsidan  */
@@ -58,8 +58,8 @@ nav a {
   align-items: center;
   max-width: 600px;
   min-height: 180px;
-  background-color: #223462;
-  color: #c5cfd7;
+  background-color: #0dce94;
+
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
@@ -88,17 +88,15 @@ h2 {
 .contact-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  color: #c5cfd7;
+  justify-content: space-evenly;
 }
 .contact {
-  width: 400px;
+  width: 340px;
   height: 400px;
-  background-color: #223462;
+  background-color: #0dce94;
   padding: 20px;
   margin: 10px;
   text-align: center;
-  border: 1px solid #ddd;
   border-radius: 10px;
 }
 
@@ -120,10 +118,9 @@ h2 {
 /* CSS till fliken Ridskola  */
 
 .ridskola-hast {
-  width: 400px;
+  width: 340px;
   height: 400px;
-  background-color: #223462;
-  color: #c5cfd7;
+  background-color: #0dce94;
   padding: 20px;
   margin: 10px;
   text-align: center;
@@ -168,6 +165,8 @@ h2 {
   row-gap: 32px;
   align-items: center;
   justify-items: center;
+  cursor: pointer;
+  border-radius: 10px;
 }
 .acc-icon {
   width: 36px;
@@ -187,7 +186,8 @@ h2 {
 }
 
 .open {
-  border-top: 4px solid #223462;
+  border-top: 4px solid #0dce94;
+  cursor: default;
 }
 
 .open .hidden-box {
@@ -195,8 +195,8 @@ h2 {
 }
 .open .acc-icon,
 .open .acc-text {
-  fill: #223462;
-  color: #223462;
+  fill: #000;
+  color: #000;
 }
 
 .personal p {
@@ -212,17 +212,50 @@ h2 {
   margin-bottom: 25px;
 }
 
+/* CSS till kalendern  */
+
+.calendar {
+  background-color: #0dce94;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.calendar-nav header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.calendar-icon {
+  padding: 0 20px;
+}
+.week {
+  display: flex;
+  list-style: none;
+}
+.week li,
+.days li {
+  text-align: center;
+  width: calc(100% / 7);
+  padding: 10px 0;
+  font-weight: 600;
+}
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.days:last-child {
+  padding-bottom: 20px;
+}
+
 /* Media query för mindra skärmar  */
 
 @media only screen and (max-width: 1200px) {
-  a {
-    display: flex;
-  }
   .meny {
-    display: flex;
-    padding: 20px 10px;
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 1.1rem;
   }
   .info-container {
     flex-flow: column nowrap;
@@ -248,7 +281,7 @@ h2 {
     margin-top: 0;
   }
   .accordion {
-    width: 700px;
+    width: 90%;
   }
   .acc-icon {
     width: 28px;
